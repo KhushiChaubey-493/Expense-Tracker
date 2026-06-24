@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <section class="box_upper">
+          <h1>Expense Tracker</h1>
+
+          <div class="balance">
+            <h2 id="netAmount">$0</h2>
+            <h3>Your Balance</h3>
+          </div>
+        </section>
+
+        <div class="transaction-container">
+          <h3>Transactions</h3>
+          <hr />
+
+          <div class="transactions">
+            <div class="transaction">
+              <div class="content">
+                <div class="left">
+                  <p>Example text</p>
+                  <p>+ $ 200</p>
+                </div>
+
+                <div class="status credit">C</div>
+              </div>
+              <div class="lower">
+                <div class="icon">
+                  <img src="images/pen.svg" alt="edit" />
+                </div>
+                <div class="icon">
+                  <img src="images/trash.svg" alt="trash" />
+                </div>
+              </div>
+            </div>
+            <!-- <div class="transaction">
+              <div class="left">
+                <p>Example text</p>
+                <p>+ $ 200</p>
+              </div>
+              <div class="status debit">D</div>
+            </div> -->
+          </div>
+        </div>
+
+        <section class="transaction-form">
+          <h3>Add Transactions</h3>
+          <form id="transactionForm">
+            <div class="inputs">
+              <div class="form-control">
+                <label for="text">Text</label>
+                <input
+                  type="text"
+                  name="text"
+                  id="text"
+                  placeholder="Enter Description"
+                />
+              </div>
+
+              <div class="form-control">
+                <label for="amount">Amount</label>
+                <input
+                  type="number"
+                  name="amount"
+                  id="amount"
+                  placeholder="Enter Amount"
+                />
+              </div>
+            </div>
+
+            <div class="buttons-container">
+              <button id="earnBtn" type="submit">
+                <p id="earning">₹0</p>
+                <p>Earning</p>
+              </button>
+
+              <button id="expBtn" type="submit">
+                <p id="expense">₹0</p>
+                <p>Expense</p>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
