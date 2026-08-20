@@ -69,7 +69,7 @@ No database or backend server is required for the current Local Storage-based im
 
 ```text
 screenshots/
-└── expense-tracker.png
+└── expense-tracker.jpeg
 ```
 
 ## 🎯 What I Learned
