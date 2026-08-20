@@ -64,7 +64,9 @@ No database or backend server is required for the current Local Storage-based im
 
 ## 🌐 Live Demo
 
-[Live Demo] https://github.com/KhushiChaubey-493/Expense-Tracker
+[Live Demo] 
+
+https://khushichaubey-493.github.io/Expense-Tracker/
 
 
 ```text
