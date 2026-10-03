@@ -1,94 +1,264 @@
-# 💰 Expense Tracker
+# Expense Tracker
 
-A responsive expense tracking web application built with **HTML, CSS, and JavaScript** for managing income and expenses.
+A responsive **Expense Tracker** web application built with **HTML, CSS, and JavaScript**. The application allows users to record earnings and expenses, monitor their current balance, and manage transaction records directly in the browser.
 
-## 📌 Overview
+Transaction data is stored using the browser's **Local Storage**, allowing records to remain available after refreshing or reopening the application.
 
-The Expense Tracker allows users to record and manage financial transactions while keeping track of their current balance.
+## Features
 
-The project was built to practice **CRUD operations, JavaScript, DOM manipulation, event handling, and browser Local Storage**.
+* Add earning transactions.
+* Add expense transactions.
+* Display the current balance dynamically.
+* Display transaction history.
+* Identify transactions as credit/earning or debit/expense.
+* Edit existing transactions.
+* Delete transactions.
+* Persist transaction data using Local Storage.
+* Dynamically update earning and expense totals.
+* Responsive user interface.
+* Client-side transaction management without a backend or database.
 
-## ✨ Features
+## Technologies Used
 
-* Add income transactions
-* Add expense transactions
-* Delete transactions
-* Calculate the current balance
-* Display transaction information
-* Persist transaction data using Local Storage
-* Responsive user interface
+* **HTML5** — Structure and form elements
+* **CSS3** — Layout, styling, and responsive design
+* **JavaScript (ES6+)** — Application logic, DOM manipulation, event handling, and transaction management
+* **Local Storage API** — Persistent browser-side data storage
 
-## 🛠️ Technologies Used
-
-* HTML5
-* CSS3
-* JavaScript (ES6+)
-* Local Storage
-* DOM Manipulation
-
-## ⚙️ How It Works
-
-1. The user enters transaction information.
-2. JavaScript processes the transaction.
-3. The transaction is added to the application.
-4. The balance is recalculated.
-5. Transaction data is stored in Local Storage.
-6. Stored data can be retrieved when the application is opened again.
-
-## 📂 Project Structure
+## Project Structure
 
 ```text
-expense-tracker/
+Expense-Tracker/
 │
+├── images/
+│   ├── pen.svg
+│   └── trash.svg
+│
+├── expense-tracker.jpeg
 ├── index.html
+├── index.js
 ├── style.css
-├── script.js
 └── README.md
 ```
 
-> Update the structure to match your actual repository.
+## How It Works
 
-## 🚀 Getting Started
+The application follows a simple transaction-management workflow.
 
-### Clone the repository
+### 1. Add a Transaction
 
-```bash
-git clone https://github.com/KhushiChaubey-493/Expense-Tracker
-```
+The user enters:
 
-### Run the project
+* Transaction description
+* Transaction amount
 
-Open `index.html` in your browser.
+The application provides separate controls for recording an **earning** or an **expense**.
 
-No database or backend server is required for the current Local Storage-based implementation.
+### 2. Calculate the Balance
 
-## 🌐 Live Demo
+The application maintains the user's financial balance based on the recorded transactions.
 
-[Live Demo] 
-
-https://khushichaubey-493.github.io/Expense-Tracker/
-
+Conceptually:
 
 ```text
-screenshots/
-└── expense-tracker.jpeg
+Balance = Total Earnings - Total Expenses
 ```
 
-## 🎯 What I Learned
+Whenever a transaction is added, edited, or deleted, the displayed financial information is updated.
 
-This project helped me practice:
+### 3. Display Transactions
 
-* CRUD operations
-* JavaScript event handling
+Each transaction is rendered dynamically in the transaction list.
+
+A transaction contains information such as:
+
+```text
+Description
+Amount
+Transaction Type
+Edit
+Delete
+```
+
+The interface visually distinguishes earning and expense transactions.
+
+### 4. Edit Transactions
+
+Existing transactions can be modified using the edit control provided with each transaction.
+
+This allows users to correct descriptions or amounts without having to recreate the transaction.
+
+### 5. Delete Transactions
+
+Users can remove unwanted transactions using the delete control.
+
+After deletion, the application's displayed financial totals are recalculated.
+
+## Local Storage
+
+The application uses the browser's **Local Storage API** to persist transaction information.
+
+This means transaction data can remain available when the user:
+
+* Refreshes the page.
+* Closes and reopens the browser.
+* Returns to the application later using the same browser storage.
+
+No server-side database is required for the current implementation.
+
+## User Interface
+
+The application includes:
+
+* **Current Balance** section
+* **Transactions** section
+* Transaction history
+* **Add Transactions** form
+* Earning control
+* Expense control
+* Edit and delete actions
+
+The HTML structure defines the main application sections, while JavaScript dynamically updates the transaction data and financial values.
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/KhushiChaubey-493/Expense-Tracker.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd Expense-Tracker
+```
+
+### 3. Run the Application
+
+Open:
+
+```text
+index.html
+```
+
+in a modern web browser.
+
+No:
+
+* Backend server
+* Database
+* Node.js installation
+* Package manager
+* External framework
+
+is required for the current implementation.
+
+## Key JavaScript Concepts Practiced
+
+This project demonstrates practical JavaScript concepts including:
+
 * DOM manipulation
-* Working with Local Storage
-* Managing application state in the browser
-* Calculating and updating dynamic values
-* Building responsive interfaces
+* Event handling
+* Form handling
+* Functions
+* Arrays and objects
+* Conditional statements
+* Array methods
+* Dynamic HTML generation
+* Browser Local Storage
+* State management
+* CRUD operations
+* Dynamic calculations
+* Updating the user interface based on application state
 
-## 👩‍💻 Author
+## CRUD Operations
+
+The project provides the core CRUD workflow for browser-based transaction management:
+
+| Operation  | Implementation               |
+| ---------- | ---------------------------- |
+| **Create** | Add a new earning or expense |
+| **Read**   | Display saved transactions   |
+| **Update** | Edit an existing transaction |
+| **Delete** | Remove a transaction         |
+
+This makes the project a useful practical example of implementing CRUD-style functionality using vanilla JavaScript and browser storage.
+
+## Data Persistence
+
+The application stores transaction information in the browser rather than sending it to a backend server.
+
+```text
+User Action
+    ↓
+JavaScript
+    ↓
+Transaction State
+    ↓
+Local Storage
+    ↓
+Dynamic UI Update
+```
+
+This architecture keeps the application lightweight and completely client-side.
+
+## Screenshot
+
+A project screenshot is included in the repository:
+
+```text
+expense-tracker.jpeg
+```
+
+You can use it to provide a visual preview of the application on the GitHub README.
+
+## Learning Objectives
+
+This project was created to strengthen practical frontend development skills, particularly:
+
+* Building forms with HTML
+* Styling responsive interfaces with CSS
+* Managing application state with JavaScript
+* Performing CRUD operations
+* Working with browser Local Storage
+* Dynamically rendering data
+* Handling user events
+* Calculating and displaying derived values
+* Structuring a small frontend application
+
+## Future Improvements
+
+Possible improvements for future versions include:
+
+* Add transaction dates.
+* Add transaction categories.
+* Add search and filtering.
+* Add monthly and yearly summaries.
+* Add income/expense charts.
+* Add category-based spending analysis.
+* Add a confirmation dialog before deletion.
+* Add form validation and clearer error messages.
+* Add export/import functionality.
+* Add CSV or PDF report generation.
+* Add dark/light theme support.
+* Add user authentication.
+* Replace Local Storage with a PHP/MySQL backend for multi-device persistence.
+
+## Project Status
+
+**Completed — Frontend Practice Project**
+
+The current version focuses on client-side transaction management using vanilla JavaScript and browser Local Storage.
+
+## Author
 
 **Khushi Chaubey**
 
-* GitHub: https://github.com/KhushiChaubey-493
-* Portfolio: https://khushichaubey-493.github.io/Personal-Portfolio-Website/
+GitHub: https://github.com/KhushiChaubey-493
+
+Portfolio: https://khushichaubey-493.github.io/Personal-Portfolio-Website/
+
+## License
+
+This project was created for learning and educational purposes.
